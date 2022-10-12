@@ -20,3 +20,6 @@
 2. 目前強制結束條件為執行時間 > 35 分鐘，請依實際執行狀況做調整
 3. 強制結束條件請加入retry機制 （將retry機制從爬蟲端移除）
 4. 路徑及命名僅供參考
+
+> 流程圖
+![流程圖](https://drive.google.com/file/d/1gcEY9iwG35fL4YmuXq9CeDw6J7kOkP-t/view?usp=sharing)
