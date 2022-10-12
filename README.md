@@ -22,4 +22,4 @@
 4. 路徑及命名僅供參考
 
 > 流程圖
-![流程圖](https://drive.google.com/file/d/1gcEY9iwG35fL4YmuXq9CeDw6J7kOkP-t/view?usp=sharing)
+![image](https://drive.google.com/uc?export=view&1gcEY9iwG35fL4YmuXq9CeDw6J7kOkP-t)
