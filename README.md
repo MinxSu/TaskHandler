@@ -22,4 +22,4 @@
 4. 路徑及命名僅供參考
 
 > 流程圖
-![image](https://drive.google.com/uc?export=view&1gcEY9iwG35fL4YmuXq9CeDw6J7kOkP-t)
+<a href="https://drive.google.com/uc?export=view&id=1gcEY9iwG35fL4YmuXq9CeDw6J7kOkP-t"><img src="https://drive.google.com/uc?export=view&id=1gcEY9iwG35fL4YmuXq9CeDw6J7kOkP-t" style="width: 650px; max-width: 100%; height: auto" title="Click to enlarge picture" />
