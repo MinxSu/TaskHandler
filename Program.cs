@@ -74,8 +74,8 @@ app.MapPost("/trigger/crawler", (SubscribeMessage info) => {
 // receive pub/sub message - AI
 app.MapPost("/trigger/ai", (SubscribeMessage info) => {
     MongoHelper db = app.Services.GetService<MongoHelper>();
-    AIProcess model = new AIProcess();
-    if (model.check(db, info.message.messageId)) {
+    AIProcess model = new AIProcess(db);
+    if (model.isDone(info.message.messageId)) {
         return Results.StatusCode(200);
     }
     return Results.StatusCode(500);

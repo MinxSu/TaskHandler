@@ -7,6 +7,13 @@ public class Request {
     public string subID { get; set; }
 }
 
+public class MainTask {
+    public string taskID { get; set; }
+    public string status { get; set; }
+    public DateTime createTime { get; set; }
+    public DateTime? updateTime { get; set; }
+}
+
 [BsonIgnoreExtraElements]
 public class TaskInfo : Request {
     public string status { get; set; }

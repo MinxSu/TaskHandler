@@ -1,29 +1,43 @@
 namespace TaskHandler;
 
 public class AIProcess {
-
     static DateTime? startTime { get; set; }
-    public bool check(MongoHelper db, string taskID) {
+    MongoHelper db { get; set; }
+    public AIProcess(MongoHelper db) {
+        this.db = db;
+    }
+
+
+    public bool isDone(string taskID) {
         if (startTime == null) {
-            startTime = DateTime.Now;
-            db.CreateLog(new Logs() {
-                step = "start AI",
-                ID = taskID
-            });
+            Start(taskID);
             return false;
         }
-        if (DateTime.Now.AddMinutes(-45) > startTime) {
-            db.CreateLog(new Logs() {
-                step = "AI Done",
-                ID = taskID
-            });
-            startTime = null;
+        if (CheckDone(taskID)) {
             return true;
         }
+        HealthCheck();
+        return false;
+    }
+
+    public void Start(string taskID) {
+        // TODO: call AI start API
         db.CreateLog(new Logs() {
-            step = "AI Pending",
+            step = "start AI",
             ID = taskID
         });
-        return false;
+        startTime = DateTime.Now;
+    }
+
+    public bool CheckDone(string taskID) {
+        MainTask task = db.ReadMainTask(taskID);
+        return task.status == "Finished";
+    }
+
+
+    public void HealthCheck() {
+        Task.Run(() => {
+            // TODO: call AI HealthCheck
+        });
     }
 }
